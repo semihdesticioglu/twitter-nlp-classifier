@@ -37,6 +37,8 @@ In this project , we focus on catching critical messages. In this view, false ne
 
 More info in here :
 https://machinelearningmastery.com/fbeta-measure-for-machine-learning/
+![Alt text](screenshots/f2_measure.PNG)
+
 <a name="FileDescriptions"></a>
 ## 3. File Descriptions
 ~~~~~~~
