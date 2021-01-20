@@ -7,6 +7,7 @@
 2. [Findings on ML processes](#FindingsonMLprocesses)
 3. [File Descriptions](#FileDescriptions)
 4. [Instructions](#Instructions)
+5. [Screenshots](#Screenshots)                                   
 
 <a name="ProjectOverview"></a>
 ## 1. Project Overview
@@ -86,3 +87,14 @@ https://machinelearningmastery.com/fbeta-measure-for-machine-learning/
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+
+<a name="Screenshots"></a>
+## 5. Screenshots
+
+### Web App Overview
+![Alt text](screenshots/main_page.png)
+
+### Sample Input Message
+![Sample Input](screenshots/sample_input.PNG)
+### Sample Output
+![Output](screenshots/sample_output.PNG)
