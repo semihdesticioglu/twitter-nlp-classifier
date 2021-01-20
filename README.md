@@ -1,5 +1,6 @@
 # Disaster Response Project - Multioutput NLP Classifier 
 ## Heal the world with Machine Learning :earth_americas: :volcano::sunrise_over_mountains:
+![](screenshots/classifying_example.gif)
 ### Table of Contents
 
 1. [Project Overview](#ProjectOverview)
