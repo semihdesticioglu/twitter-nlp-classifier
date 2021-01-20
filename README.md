@@ -36,6 +36,20 @@ In imbalanced data we should focus on F1 Score, not in accuracy. Because negativ
 
 In this project , we focus on catching critical messages. In this view, false negatives are more critical for us. We do not want miss critical food or water helps, or rescue helps. In order to get a better model from this perspective, recall will be more useful for us. I created a custom scoring function derived from fbeta with beta=2, actually this is corresponds to F2 measure.
 
+I also added more weights to some categories in this f1beta custom score :
+```
+def multiOutputF1_beta_score(y_true,y_pred,beta=2):
+    critical_types = ["search_and_rescue","missing_people","death","medical_products","medical_help","food","water"]
+    score_sum = 0
+    for column in range(0,y_true.shape[1]):
+        score = fbeta_score(y_true.loc[:,y_true.columns[column]],y_pred[:,column], beta, average='binary')
+        if y_true.columns[column] in set(critical_types):
+            score = score * 4
+        score_sum += score
+    avg_f1_beta = score_sum / ( y_true.shape[1] + (len(critical_types) * 4) - 7 )
+    return  avg_f1_beta
+```
+
 More info in here :
 https://machinelearningmastery.com/fbeta-measure-for-machine-learning/
 ![Alt text](screenshots/f2_measure.PNG)
